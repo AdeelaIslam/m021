@@ -1,0 +1,138 @@
+﻿@model IEnumerable<KidsAcademy.Models.poemTable>
+
+<!DOCTYPE html>
+<!--[if lte IE 8]><html class="ie8 no-js" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9 no-js" lang="en"><![endif]-->
+<html class="no-ie">
+
+
+<head>
+    <style>
+        body {
+            
+            margin: 0;
+            padding: 0;
+        }
+
+        #imageList {
+            font-size: 0;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+            #imageList a {
+                margin: 2px;
+                border: 4px solid transparent;
+                display: inline-block;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+            }
+
+                #imageList a:hover {
+                    border-color: white;
+                }
+
+            #imageList img {
+                border-radius: 6px;
+            }
+    </style>
+</head>
+
+<body data-type-of-widget="2" class="page secondary-page t-pattern-1">
+
+
+
+    <div class="bg-level-2-full-width-container kids_bottom_content">
+        <div class="bg-level-2-page-width-container no-padding">
+            <section class="kids_bottom_content_container">
+                <!-- ***************** - START Image floating - *************** -->
+                <div class="page-content">
+                    <div class="bg-level-2 first-part"></div>
+                    <div class="container l-page-width">
+                        <div class="entry-container ">
+                            <main>
+
+                                @foreach(var item in Model)
+                                {
+                                    <h1 style="margin-left: 410px">@item.poem_name</h1>
+                                    <div id="imageList">
+                                    
+                                        <a href="@(System.Configuration.ConfigurationManager.AppSettings["adminURL"] + item.poem_image.Substring(1, item.poem_image.Length - 1))"><img src="@(System.Configuration.ConfigurationManager.AppSettings["adminURL"] + item.poem_image.Substring(1, item.poem_image.Length - 1))" alt="One" /> </a>
+                                  
+                                    </div>  
+                                }
+                                @*
+                <h1 style="margin-left: 410px">Hop & Stop</h1>
+                <div id="imageList">
+
+                    <a href="../images/poem1.jpg"><img src="../images/poem1.jpg" alt="One" /> </a>
+
+                </div>
+
+                <h1 style="margin-left: 430px">Caden</h1>
+                <div id="imageList">
+                    <a href="../images/poem2.jpg"><img src="../images/poem2.jpg" alt="Two" /> </a>
+                </div>
+
+                <h1 style="margin-left: 430px">Mother</h1>
+                <div id="imageList">
+                    <a href="../images/poem3.jpg"><img src="../images/poem3.jpg" alt="three" /> </a>
+                </div>
+
+                <h1 style="margin-left: 430px">Teddy</h1>
+                <div id="imageList">
+                    <a href="../images/poem4.jpg"><img src="../images/poem4.jpg" alt="four" /> </a>
+                </div>
+
+                <h1 style="margin-left: 410px">My Snow Man</h1>
+                <div id="imageList">
+                    <a href="../images/poem5.jpg"><img src="../images/poem5.jpg" alt="five" /> </a>
+                </div>
+
+                <h1 style="margin-left: 410px">The Frog</h1>
+                <div id="imageList">
+                    <a href="../images/poem6.jpg"><img src="../images/poem6.jpg" alt="six" /> </a>
+                </div>
+
+                <h1 style="margin-left: 410px">Friendship</h1>
+                <div id="imageList">
+                    <a href="../images/poem7.jpg"><img src="../images/poem7.jpg" alt="seven" /> </a>
+                </div>
+
+                <h1 style="margin-left: 440px">Mom</h1>
+                <div id="imageList">
+                    <a href="../images/poem8.jpg"><img src="../images/poem8.jpg" alt="eight" /> </a>
+                </div>
+
+                <h1 style="margin-left: 410px">The Rainbow</h1>
+                <div id="imageList">
+                    <a href="../images/poem9.jpg"><img src="../images/poem9.jpg" alt="nine" /> </a>
+                </div>
+
+                <h1 style="margin-left: 310px">three Blind Mice & Handy Pandy</h1>
+                <div id="imageList">
+                    <a href="../images/poem10.jpg"><img src="../images/poem10.jpg" alt="ten" /> </a>
+                </div>
+
+            *@
+
+
+                            </main>
+                        </div>
+                        <!-- .entry-container -->
+                    </div>
+                    <div class="bg-level-2 second-part"></div>
+                </div>
+                <!-- ***************** - END Image floating - *************** -->
+            </section>
+            <!-- .bottom_content_container -->
+        </div>
+        <div class="content_bottom_bg"></div>
+    </div>
+
+
+
+</body>
+
+
+</html>

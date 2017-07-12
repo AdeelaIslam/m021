@@ -1,0 +1,123 @@
+﻿@model KidsAcademy.Models.ContactUs
+<!DOCTYPE html>
+<!--[if lte IE 8]><html class="ie8 no-js" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9 no-js" lang="en"><![endif]-->
+<html class="no-ie">
+
+
+<body data-type-of-widget="2" class="page secondary-page t-pattern-1">
+
+
+
+    <div class="bg-level-2-full-width-container kids_bottom_content">
+        <div class="bg-level-2-page-width-container no-padding">
+            <section class="kids_bottom_content_container">
+                <!-- ***************** - START Image floating - *************** -->
+                <div class="page-content">
+                    <div class="bg-level-2 first-part"></div>
+                    <div class="container l-page-width">
+                        <div class="entry-container ">
+                            <main>
+
+
+
+
+                                <div class='grid-row clearfix'>
+                                    <div class='grid-col grid-col-12'>
+                                        
+                                    </div>
+                                </div>
+                                <div class='grid-row clearfix'>
+                                    <div class='grid-col grid-col-9'>
+                                        <section class='cws-widget'>
+                                            <div class='widget-title'>About Our Company</div>
+                                            <section class='cws_widget_content'>
+                                                
+                                                    <strong>Kids Academy</strong>, based on Educational learning of growing kids as well as for thei entertainment purpose.
+
+
+                                                    <section class='cws-widget'>
+                                                        <div class='widget-title'>How to find us</div>
+                                                        <section class='cws_widget_content'>
+                                                            <!-- map -->
+                                                            <!--/ map -->
+                                                        </section>
+                                                    </section>
+
+
+                                                    <div role="form" class="wpcf7" id="wpcf7-f622-p199-o1" lang="en-US" dir="ltr">
+                                                        <div class="screen-reader-response"></div>
+
+                                                        @using (Html.BeginForm())
+                                                        { 
+                                                               <form class="wpcf7-form contact-form">
+                                                
+                                                    <span class="wpcf7-form-control-wrap your-name">
+                                                    @Html.TextBoxFor(Model => Model.Name, new { @class = "wpcf7-form-control wpcf7-text wpcf7-validates-as-required", placeholder = "Name", type = "text", style="padding-right: 238px;" })
+                                                    @Html.ValidationMessageFor(Model=>Model.Name)
+                                                    </span>
+                                                     <span class="wpcf7-form-control-wrap your-email">
+                                                    @Html.TextBoxFor(Model => Model.Email, new { @class = "wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email",placeholder = "Email", type = "text", style = "padding-right: 240px;" })
+                                                    @Html.ValidationMessageFor(Model => Model.Email)
+                                                     </span>
+                                                    <span class="wpcf7-form-control-wrap your-message">
+                                                    @Html.TextAreaFor(Model => Model.Message, new { @class = "wpcf7-form-control wpcf7-textarea", placeholder = "Message" , style="width: 430%; padding-bottom: 155px"})
+                                                    @Html.ValidationMessageFor(Model=> Model.Message)
+                                                    </span>
+                                                    <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit" style="margin-top: 218px;" />
+                                                
+                                                </form>
+                                                        
+                                                        
+                                                        
+                                                        }
+                                                 
+                                                <div id="email_server_responce"></div>
+                                                <div class="message_box error-box  close">
+                                                    <div class="message_box_header">Error Box</div>
+                                                </div>
+                                    </div>
+            </section>
+            </section>
+        </div>
+        <div class='grid-col grid-col-3'>
+            <section class='cws-widget'>
+                <div class='widget-title'>Contact Details</div>
+                <section class='cws_widget_content'>
+                    <p>Kids Academy, based on Educational learning of growing kids as well as for thei entertainment purpose.</p>
+                    <p><strong>Mall Road</strong></p>
+                    <p><strong>PUCIT Allama Iqbal Campus</strong></p>
+                    <p><strong>Lahore</strong></p>
+                    <p><strong>Pakistan</strong></p>
+                    <p><strong>Support: <a class="link" href="http://html.creaws.com/cdn-cgi/l/email-protection#53202623233c212713202623233c21277d303c3e"><span class="__cf_email__" data-cfemail="02717772726d707642717772726d70762c616d6f">[email&#160;protected]</span>
+                    <script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function (t, e, r, n, c, a, p) { try { t = document.currentScript || function () { for (t = document.getElementsByTagName('script'), e = t.length; e--;) if (t[e].getAttribute('data-cfhash')) return t[e] }(); if (t && (c = t.previousSibling)) { p = t.parentNode; if (a = c.getAttribute('data-cfemail')) { for (e = '', r = '0x' + a.substr(0, 2) | 0, n = 2; a.length - n; n += 2) e += '%' + ('0' + ('0x' + a.substr(n, 2) ^ r).toString(16)).slice(-2); p.replaceChild(document.createTextNode(decodeURIComponent(e)), c) } p.removeChild(t) } } catch (u) { } }()/* ]]> */</script></a></strong></p>
+                </section>
+            </section>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    </main>
+    </div>
+    <!-- .entry-container -->
+    </div>
+    <div class="bg-level-2 second-part"></div>
+    </div>
+    <!-- ***************** - END Image floating - *************** -->
+    </section>
+    <!-- .bottom_content_container -->
+    </div>
+    <div class="content_bottom_bg"></div>
+    </div>
+
+
+
+</body>
+
+
+</html>

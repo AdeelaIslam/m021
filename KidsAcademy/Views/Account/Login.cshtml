@@ -1,0 +1,67 @@
+﻿@model KidsAcademy.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Let me in";
+}
+
+
+<!DOCTYPE html>
+<!--[if lte IE 8]><html class="ie8 no-js" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9 no-js" lang="en"><![endif]-->
+<html class="no-ie">
+
+
+<body data-type-of-widget="2" class="page secondary-page t-pattern-1">
+
+
+
+    <div class="bg-level-2-full-width-container kids_bottom_content">
+        <div class="bg-level-2-page-width-container no-padding">
+            <section class="kids_bottom_content_container">
+                <!-- ***************** - START Image floating - *************** -->
+                <div class="page-content">
+                    <div class="bg-level-2 first-part"></div>
+                    <div class="container l-page-width">
+                        <div class="entry-container ">
+                            <main>
+
+                                <h1 style="color: purple;">@ViewBag.Title.</h1>
+
+                                <div style="margin: 0 auto;">
+                                    @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { role = "form" }))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        @Html.LabelFor(model => model.UserName) <br />
+                                        @Html.TextBoxFor(model => model.UserName)
+                                        @Html.ValidationMessageFor(model => model.UserName)<br />
+
+                                        @Html.LabelFor(model => model.Password) <br />
+                                        @Html.PasswordFor(model => model.Password)
+                                        @Html.ValidationMessageFor(model => model.Password)<br />
+                                        <br />
+
+
+
+                                        <button type="submit" style="background-color:powderblue; color: darkorange;">Login</button>
+                                    }
+
+                                </div>
+
+
+                            </main>
+                        </div>
+                        <!-- .entry-container -->
+                    </div>
+                    <div class="bg-level-2 second-part"></div>
+                </div>
+                <!-- ***************** - END Image floating - *************** -->
+            </section>
+            <!-- .bottom_content_container -->
+        </div>
+        <div class="content_bottom_bg"></div>
+    </div>
+
+
+
+</body>
+</html>

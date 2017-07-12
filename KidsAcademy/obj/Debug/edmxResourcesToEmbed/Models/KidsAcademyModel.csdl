@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KidsAcademyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="countingTable">
+    <Key>
+      <PropertyRef Name="counting_id" />
+    </Key>
+    <Property Name="counting_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="counting_image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="counting_imageLarge" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="poemTable">
+    <Key>
+      <PropertyRef Name="poem_id" />
+    </Key>
+    <Property Name="poem_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="poem_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="poem_image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="KidsAcademyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="countingTables" EntityType="Self.countingTable" />
+    <EntitySet Name="poemTables" EntityType="Self.poemTable" />
+  </EntityContainer>
+</Schema>

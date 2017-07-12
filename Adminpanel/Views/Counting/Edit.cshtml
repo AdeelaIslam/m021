@@ -1,0 +1,50 @@
+﻿@model Adminpanel.Models.countingTable
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm("Edit", "Counting", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>countingTable</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.counting_id)
+
+        <div class="form-group">
+            @Html.HiddenFor(model => model.counting_image)
+            @Html.LabelFor(model => model.counting_image, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="ImageFile">
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.HiddenFor(model => model.counting_imageLarge)
+            @Html.LabelFor(model => model.counting_imageLarge, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="ImageFileOne">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

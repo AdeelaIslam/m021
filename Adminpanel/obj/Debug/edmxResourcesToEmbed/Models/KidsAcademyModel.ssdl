@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KidsAcademyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="countingTable">
+    <Key>
+      <PropertyRef Name="counting_id" />
+    </Key>
+    <Property Name="counting_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="counting_image" Type="varchar(max)" />
+    <Property Name="counting_imageLarge" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="poemTable">
+    <Key>
+      <PropertyRef Name="poem_id" />
+    </Key>
+    <Property Name="poem_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="poem_name" Type="varchar" MaxLength="50" />
+    <Property Name="poem_image" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="KidsAcademyModelStoreContainer">
+    <EntitySet Name="countingTable" EntityType="Self.countingTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="poemTable" EntityType="Self.poemTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

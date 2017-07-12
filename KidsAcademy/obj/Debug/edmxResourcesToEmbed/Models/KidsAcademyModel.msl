@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KidsAcademyModelStoreContainer" CdmEntityContainer="KidsAcademyEntities">
+    <EntitySetMapping Name="countingTables">
+      <EntityTypeMapping TypeName="KidsAcademyModel.countingTable">
+        <MappingFragment StoreEntitySet="countingTable">
+          <ScalarProperty Name="counting_imageLarge" ColumnName="counting_imageLarge" />
+          <ScalarProperty Name="counting_id" ColumnName="counting_id" />
+          <ScalarProperty Name="counting_image" ColumnName="counting_image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="poemTables">
+      <EntityTypeMapping TypeName="KidsAcademyModel.poemTable">
+        <MappingFragment StoreEntitySet="poemTable">
+          <ScalarProperty Name="poem_id" ColumnName="poem_id" />
+          <ScalarProperty Name="poem_name" ColumnName="poem_name" />
+          <ScalarProperty Name="poem_image" ColumnName="poem_image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

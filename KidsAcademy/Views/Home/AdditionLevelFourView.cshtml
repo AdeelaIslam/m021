@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<!--[if lte IE 8]><html class="ie8 no-js" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9 no-js" lang="en"><![endif]-->
+<html class="no-ie">
+
+<head>
+    <title> Captcha </title>
+    <style>
+        #randomfield, #randomfieldTwo {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            width: 200px;
+            color: black;
+            border-color: black;
+            text-align: center;
+            font-size: 40px;
+            background-image: url(../images/background.jpg);
+        }
+    </style>
+</head>
+
+
+<body data-type-of-widget="2" class="page secondary-page t-pattern-1" onload="ChangeCaptcha()">
+
+
+
+    <div class="bg-level-2-full-width-container kids_bottom_content">
+        <div class="bg-level-2-page-width-container no-padding">
+            <section class="kids_bottom_content_container">
+                <!-- ***************** - START Image floating - *************** -->
+                <div class="page-content">
+                    <div class="bg-level-2 first-part"></div>
+                    <div class="container l-page-width">
+                        <div class="entry-container ">
+                            <main>
+
+
+
+
+
+
+                                <h1 style="text-align: center;"> Level Four </h1>
+
+                                <input type="text" id="randomfield" disabled>
+                                <h2 style="margin-top: 3px; margin-left: 90px;">+</h2>
+                                <input type="text" id="randomfieldTwo" disabled>
+
+                                <script>
+                                    // Do not remove this (it's just a comment and won't effect the functions)
+                                    // SimpleCaptcha v1.0 © Anudeep Tubati
+                                    function ChangeCaptcha() {
+                                        var chars = "0123456789";
+                                        var string_length = 4;
+                                        var ChangeCaptcha = '';
+                                        for (var i = 0; i < string_length; i++) {
+                                            var rnum = Math.floor(Math.random() * chars.length);
+                                            ChangeCaptcha += chars.substring(rnum, rnum + 1);
+                                        }
+                                        document.getElementById('randomfield').value = ChangeCaptcha;
+
+                                        var chars = "0123456789";
+                                        var string_length = 4;
+                                        var ChangeCaptcha = '';
+                                        for (var i = 0; i < string_length; i++) {
+                                            var rnum = Math.floor(Math.random() * chars.length);
+                                            ChangeCaptcha += chars.substring(rnum, rnum + 1);
+                                        }
+                                        document.getElementById('randomfieldTwo').value = ChangeCaptcha;
+                                    }
+                                    function check() {
+                                        if (document.getElementById('CaptchaEnter').value == ((+(document.getElementById('randomfield').value)) + (+(document.getElementById('randomfieldTwo').value)))) {
+                                            window.open('/Home/CongratulationsView', '_self');
+                                        }
+                                        else {
+                                            alert('OoooopSsSs....Wrong Answer');
+                                        }
+                                    }
+                                </script>
+                                <br><br>
+                                <input id="CaptchaEnter" size="20" maxlength="6" style="border:2px solid #ff0000" />
+                                <br><br>
+                                <button onclick="check()">Check Answer</button>
+
+
+
+
+                            </main>
+                        </div>
+                        <!-- .entry-container -->
+                    </div>
+                    <div class="bg-level-2 second-part"></div>
+                </div>
+                <!-- ***************** - END Image floating - *************** -->
+            </section>
+            <!-- .bottom_content_container -->
+        </div>
+        <div class="content_bottom_bg"></div>
+    </div>
+
+
+
+</body>
+
+
+</html>

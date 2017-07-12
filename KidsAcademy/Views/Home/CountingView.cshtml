@@ -1,0 +1,103 @@
+﻿@model IEnumerable<KidsAcademy.Models.countingTable>
+
+<!DOCTYPE html>
+<!--[if lte IE 8]><html class="ie8 no-js" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9 no-js" lang="en"><![endif]-->
+<html class="no-ie">
+
+
+<head>
+    <style>
+        body {
+            background: url("../images/wood.jpg");
+            margin: 0;
+            padding: 0;
+        }
+
+        #imageList {
+            font-size: 0;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+            #imageList a {
+                margin: 2px;
+                border: 4px solid transparent;
+                display: inline-block;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+            }
+
+                #imageList a:hover {
+                    border-color: white;
+                }
+
+            #imageList img {
+                border-radius: 6px;
+            }
+    </style>
+</head>
+
+    <body data-type-of-widget="2" class="page secondary-page t-pattern-1">
+
+
+
+        <div class="bg-level-2-full-width-container kids_bottom_content">
+            <div class="bg-level-2-page-width-container no-padding">
+                <section class="kids_bottom_content_container">
+                    <!-- ***************** - START Image floating - *************** -->
+                    <div class="page-content">
+                        <div class="bg-level-2 first-part"></div>
+                        <div class="container l-page-width">
+                            <div class="entry-container ">
+                                <main>
+
+
+                                    <div id="imageList">
+                                         @foreach (var item in Model)
+                                        {
+
+                                            <a href="@(System.Configuration.ConfigurationManager.AppSettings["adminURL"] + item.counting_imageLarge.Substring(1, item.counting_imageLarge.Length - 1))">
+                                                <img src="@(System.Configuration.ConfigurationManager.AppSettings["adminURL"] + item.counting_image.Substring(1, item.counting_image.Length - 1))" alt="one" />
+                                             </a>
+                                       
+                                        }
+                                    </div>
+         @*
+        <div id="imageList">
+                <a href="../images/one.jpg"><img src="../images/oneSmall.jpg" alt="One" /> </a>
+                <a href="../images/two.jpg"><img src="../images/twoSmall.jpg" alt="Two" /> </a>
+                <a href="../images/three.jpg"><img src="../images/threeSmall.jpg" alt="three" /> </a>
+                <a href="../images/four.jpg"><img src="../images/fourSmall.jpg" alt="four" /> </a>
+                <a href="../images/five.jpg"><img src="../images/fiveSmall.jpg" alt="five" /> </a>
+                <a href="../images/six.jpg"><img src="../images/sixSmall.jpg" alt="six" /> </a>
+                <a href="../images/seven.jpg"><img src="../images/sevenSmall.jpg" alt="seven" /> </a>
+                <a href="../images/eight.jpg"><img src="../images/eightSmall.jpg" alt="eight" /> </a>
+                <a href="../images/nine.jpg"><img src="../images/nineSmall.jpg" alt="nine" /> </a>
+                <a href="../images/ten.jpg"><img src="../images/tenSmall.jpg" alt="ten" /> </a>
+            </div>
+
+          *@      
+
+
+
+
+                                </main>
+                            </div>
+                            <!-- .entry-container -->
+                        </div>
+                        <div class="bg-level-2 second-part"></div>
+                    </div>
+                    <!-- ***************** - END Image floating - *************** -->
+                </section>
+                <!-- .bottom_content_container -->
+            </div>
+            <div class="content_bottom_bg"></div>
+        </div>
+
+
+
+    </body>
+
+
+</html>
